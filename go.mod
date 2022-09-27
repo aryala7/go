@@ -1,4 +1,4 @@
-module arya.la/code
+module github.com/aryala7/go
 
 go 1.16
 

@@ -4,12 +4,13 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/aryala7/go/pkg/handler"
 	"github.com/gorilla/mux"
 )
 
 func main() {
 	router := mux.NewRouter()
-	router.HandleFunc("/books", handlers.GetAllBooks).Methods(http.MethodGet)
+	router.HandleFunc("/books", handler.GetAllBooks).Methods(http.MethodGet)
 	log.Println("Api is Running...")
-	http.ListenAndServe(":8080", router)
+	http.ListenAndServe(":4000", router)
 }
